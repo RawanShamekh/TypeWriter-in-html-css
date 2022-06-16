@@ -1,0 +1,94 @@
+@import url('https://fonts.googleapis.com/css2?family=Space+Mono&display=swap');
+	
+
+	:root{
+		--bg-color:hsl(49 37% 94%);
+		--typewriterSpeed: 6s;
+		
+	}
+	body{
+      margin: 0;
+
+      font-family: 'Space Mono', monospace;
+      place-content: center;
+      text-align: center;
+      min-height: 100vh;
+      display: grid; 
+      background-color: var(--bg-color);
+  }
+  h1{
+  	position: relative;
+  	width: max-content;
+  }
+.subtitle{
+			font-size: 20px;
+			font-weight: 400;
+			color:gray;
+		}
+		h1::before,
+		h1::after{
+			position: absolute;
+			content: "";
+			top: 0;
+			bottom: 0;
+			right: 0;
+			left: 0;
+		}
+		h1::before{
+		background-color:var(--bg-color);
+			animation: typewriter  var(--typewriterSpeed) steps(26)  1s  forwards;
+			
+
+		}
+		@keyframes typewriter{
+			to{
+				left: 100%;
+			}
+		}
+		h1::after{
+			width: 0.125em;
+			background-color: black;
+
+			animation: typewriter var(--typewriterSpeed)steps(26) 1s  forwards,
+			blink  750ms steps(26) infinite;
+		}
+		@keyframes blink{
+			to{
+				background-color: transparent;
+			}
+		}
+	.subtitle {
+  -webkit-animation-name: fadeInUp;
+  animation-name: fadeInUp;
+  -webkit-animation-duration: 2s;
+  animation-duration: 2s;
+  -webkit-animation-fill-mode: both;
+  animation-fill-mode: both;
+ animation-delay:8s;
+  }
+  @-webkit-keyframes fadeInUp {
+  0% {
+  opacity: 0;
+  -webkit-transform: translate3d(0, 100%, 0);
+  transform: translate3d(0, 100%, 0);
+  }
+  100% {
+  opacity: 1;
+  -webkit-transform: none;
+  transform: none;
+  }
+  }
+  @keyframes fadeInUp {
+  0% {
+  opacity: 0;
+  -webkit-transform: translate3d(0, 100%, 0);
+  transform: translate3d(0, 100%, 0);
+  }
+  100% {
+  opacity: 1;
+  -webkit-transform: none;
+  transform: none;
+  }
+  } 
+
+ 
